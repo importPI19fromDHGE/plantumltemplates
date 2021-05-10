@@ -1,0 +1,16 @@
+@startuml
+skinparam linetyp ortho
+rectangle A
+rectangle B
+rectangle C
+rectangle D
+
+A -up-* D
+B -up-* D
+C -up-* D
+
+A #-ri0)- B
+
+B #-ri0)- C
+C #-le0)- B
+@enduml
