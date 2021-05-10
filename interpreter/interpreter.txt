@@ -1,0 +1,21 @@
+@startuml
+
+skinparam linetype ortho
+top to bottom direction
+title Interpreter
+
+rectangle "Programm"as P
+rectangle "Abstrakte Maschine" as A
+rectangle "Basissystem" as B
+P -right-> A
+note right
+parsen des Skriptes bzw. der Programms
+end note
+A <-down->B
+
+actor " " as AC
+note right
+Interaktion mit dem Programm
+end note
+AC <-down-> A
+@enduml
