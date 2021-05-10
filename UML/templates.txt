@@ -1,1 +1,2 @@
 !define r(x,y) rectangle "x" as y
+//deprecated
