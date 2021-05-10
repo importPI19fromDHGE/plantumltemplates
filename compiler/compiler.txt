@@ -1,0 +1,26 @@
+@startuml
+skinparam linetype polyline
+top to bottom direction
+title Arbeitsweise Compiler
+
+package "Frontend" as F{
+rectangle "lexikalische Analyse" as LA
+package "Parsing" as P {
+rectangle "Syntaxanalyse" as SY
+rectangle "Semantische Analyse" as SA
+}
+rectangle "Zwischencodeerzeugung" as ZW 
+}
+[Quellcode] -down->LA
+LA -down-> SY
+SY -down-> SA
+SA -down->ZW
+ZW -down-> [Zwischencode]
+package "Backend" as B{
+rectangle "Codeoptimierung" as CO
+rectangle "Codeerzeugung"  as CG
+}
+[Zwischencode] -down-> CO
+CO -down->CG
+CG -down->[Maschinencode / Bytecode ]
+@enduml
