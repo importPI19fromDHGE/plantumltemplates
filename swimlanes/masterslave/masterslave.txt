@@ -1,0 +1,39 @@
+@startuml
+
+participant Manager as M
+participant GUI as G
+participant Sensor as S
+participant Aktor as A
+
+activate M
+M -> G
+activate G
+G -->M
+M ->S
+activate S
+S -->M
+deactivate S
+
+M -> A 
+activate A
+A -->M
+deactivate A
+
+M ->S
+activate S
+S -->M
+deactivate S
+
+M -> A 
+activate A
+A -->M
+deactivate A
+
+M -> G
+G -->M
+deactivate G
+
+G -[hidden]-> M
+
+deactivate M
+@enduml
