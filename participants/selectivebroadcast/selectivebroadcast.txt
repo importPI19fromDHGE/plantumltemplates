@@ -1,0 +1,35 @@
+@startuml
+
+participant "Event Handler" as M
+participant "SubSystem 1" as G
+participant "SubSystem 2" as S
+participant "SubSystem 3" as A
+
+
+-> M: externes Event
+activate M
+
+G ->M : event
+activate G
+M -> G : e
+deactivate G
+M ->S : e
+
+
+M -> A : e
+activate A
+A ->M : event
+deactivate A
+
+M ->G : e'
+activate G
+deactivate G
+deactivate S
+
+
+G -[hidden]-> M
+
+
+
+deactivate M
+@enduml
