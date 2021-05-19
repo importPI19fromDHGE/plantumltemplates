@@ -1,0 +1,27 @@
+@startuml
+|User|
+start
+:Eingabe Nutzername;
+:Eingabe Passwort;
+:Anmelden Knopf drücken ;
+|Client|
+:hash password;
+:send data to server;
+|#AntiqueWhite|WebServer|
+:receive data;
+:send hash;
+|LDAP|
+:Ticket irgendwie;
+|#AntiqueWhite|Datenbank|
+:compare hash;
+:send result;
+|LDAP|
+:send result;
+|#AntiqueWhite|WebServer|
+:allow / disallow;
+|Client|
+:show success /error;
+|User|
+:Freude/Ärger;
+stop
+@enduml
