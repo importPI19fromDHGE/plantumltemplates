@@ -1,0 +1,27 @@
+@startuml
+
+Hauptprogramm -> UP1: DoWork
+activate UP1
+
+UP1 -> Alice
+
+Alice -> Berta: << createRequest >>
+activate Berta
+
+
+
+deactivate Alice
+Berta -> C: (abc,123)
+activate C
+C --> Berta: boolean
+destroy C
+
+Berta --> Alice: RequestCreated
+deactivate Berta
+Alice -->UP1
+
+UP1 --> Hauptprogramm: done
+deactivate UP1
+
+
+@enduml
