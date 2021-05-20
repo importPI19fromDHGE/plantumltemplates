@@ -1,0 +1,20 @@
+@startuml
+title 3 Schichten Modell
+
+actor " " as AC
+
+skinparam linetype polyline
+top to bottom direction
+
+rectangle "Command Line" as CL
+rectangle "GUI" as GUI
+rectangle "Algorithmen" as A
+rectangle "Daten" as D
+
+AC <--> CL
+AC <-->GUI
+
+CL -- A
+GUI -- A
+A -- D
+@enduml
