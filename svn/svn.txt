@@ -1,0 +1,21 @@
+@startuml
+title **SVN**
+
+skinparam linetype ortho
+top to bottom direction
+
+rectangle "/usr/bin/svn" as U
+rectangle "kdesvn" as K
+rectangle "WEB" as W
+rectangle ".             Zugrifssteuerung             ." as Z{
+skinparam color white 
+}
+rectangle ".                Repository                 ." as R
+
+U -0)- Z
+K -0)- Z
+W -0)- Z
+
+Z -- R
+
+@enduml
