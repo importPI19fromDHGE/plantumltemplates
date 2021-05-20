@@ -1,0 +1,25 @@
+@startuml
+|Webserver|
+:username password;
+:OK Knopf;
+-> Zugangskontrolle starten;
+|#AntiqueWhite|Backend|
+:LDAP;
+:Oracale;
+-> Info:
+*valid login
+* Datensatz;
+|Webserver|
+if (valid) then (valides login)
+    :Stammdaten abfragen|
+    :Stammdaten laden;
+    :*Stammdaten 
+    * Tarifdaten 
+    anzeigen;
+else
+    |Webserver|
+    :Fehlermeldung;
+endif
+    :Ende Knopf einblenden;
+stop
+@enduml
