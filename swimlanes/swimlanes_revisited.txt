@@ -1,0 +1,37 @@
+@startuml
+|User|
+start
+:Eingabe Nutzername;
+:Eingabe Passwort;
+:Anmelden Knopf drücken ;
+|Client|
+:hash password;
+:send data to server;
+|#AntiqueWhite|WebServer|
+:receive data;
+:send hash;
+|LDAP|
+:Ticket irgendwie;
+|#AntiqueWhite|Datenbank|
+:send hash;
+|LDAP|
+
+if (valid) then (valid login)
+   :Antwort: Login erlaubt|   
+else
+    :Antwort: Login fehlgeschlagen|
+endif
+:Antwort an WebServer senden;
+|#AntiqueWhite|WebServer|
+:Antwort an Client senden;
+|Client|
+:Antwort anzeigen;
+|User|
+if (Login erfolgreich) then (ja)
+   :freue dich!;   
+else (nein)
+    :nochmal versuchen;
+    
+endif
+stop
+@enduml

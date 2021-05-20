@@ -5,7 +5,7 @@
 -> Zugangskontrolle starten;
 |#AntiqueWhite|Backend|
 :LDAP;
-:Oracale;
+:Oracle;
 -> Info:
 *valid login
 * Datensatz;
