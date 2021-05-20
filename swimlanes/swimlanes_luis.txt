@@ -5,7 +5,11 @@
 -> Zugangskontrolle starten;
 |#AntiqueWhite|Backend|
 :LDAP;
+<<<<<<< Updated upstream
 :Oracale;
+=======
+:Oracle;
+>>>>>>> Stashed changes
 -> Info:
 *valid login
 * Datensatz;
