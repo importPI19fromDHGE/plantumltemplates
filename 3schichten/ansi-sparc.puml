@@ -1,0 +1,12 @@
+@startuml
+
+skinparam shadowing false
+
+Rectangle "Externe Ebene" AS EE
+Rectangle "Konzeptuelle Ebene" AS KE
+Rectangle "Interne Ebene" AS IE
+
+EE <-down-> KE :"    <b>logische Datenunabhängigkeit</b>"
+KE <-down-> IE :"    <b>physische Datenunabhängigkeit</b>"
+
+@enduml
