@@ -1,4 +1,4 @@
-# kaschesaufgaben
+# plantumltemplates
 Uml-Bascis sollen hier sein
 Beispiel Bild:
 
