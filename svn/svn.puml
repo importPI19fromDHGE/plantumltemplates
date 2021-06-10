@@ -7,7 +7,7 @@ top to bottom direction
 rectangle "/usr/bin/svn" as U
 rectangle "kdesvn" as K
 rectangle "WEB" as W
-rectangle ".             Zugrifssteuerung             ." as Z{
+rectangle ".             Zugriffssteuerung             ." as Z{
 skinparam color white 
 }
 rectangle ".                Repository                 ." as R
