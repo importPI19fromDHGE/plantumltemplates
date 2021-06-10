@@ -1,0 +1,24 @@
+@startuml unterrichtsraum
+
+title Unterrichtsraum
+
+skinparam Linetype ortho
+
+rectangle "PI19/IK19"{
+	rectangle Nutzer as N{
+		rectangle "                  Prof.                  " as P
+		rectangle "männliche\nStud." as M
+		rectangle "weibliche\nStud." as W
+		P -down-> W
+		P -down-> M
+		M <-right-> W
+	}
+	rectangle Möbiliar as X{
+		rectangle "Stühle" as S
+		rectangle "Tisch" as T
+		rectangle "PC" as PC
+		S "2 " o-up- "1 " T 
+	}
+}
+
+@enduml
